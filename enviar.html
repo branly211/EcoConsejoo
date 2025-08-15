@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="form-section">
+    <h2>Envía tu consejo ecológico</h2>
+    <form action="{{ url_for('enviar') }}" method="post" class="consejo-form">
+      <label for="titulo">Título</label>
+      <input id="titulo" name="titulo" type="text" maxlength="80" required>
+
+      <label for="texto">Consejo (breve)</label>
+      <textarea id="texto" name="texto" rows="4" maxlength="400" required></textarea>
+
+      <button type="submit">Enviar consejo</button>
+    </form>
+  </section>
+{% endblock %}
